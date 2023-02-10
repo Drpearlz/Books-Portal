@@ -1,0 +1,15 @@
+<div class="card grid gap-3" style="width:400px">
+  <img class="card-img-top" [src]="book.image" alt="Card image" style="width:100%">
+  <div class="card-body">
+    <h3 class="card-title">{{book.title}}</h3>
+    <p class="card-text">Author: {{book.author}}</p>
+    <p class="card-text">Publisher: {{book.publisher}}</p>
+    <p class="card-text">Published Date: {{book.published_date}}</p>
+    <p class="card-text">Status: {{book.status}}</p>
+    <p class="card-text">Borrower Email: {{book.borrower_email}}</p>
+   
+    <input type="text" #f >
+    <button (click)="change_book(f, book.ID)" class="btn btn-primary">{{book.status == 'available'?'Borrow':'Return'}}</button>
+    
+  </div>
+</div>

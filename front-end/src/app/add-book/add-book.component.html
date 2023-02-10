@@ -1,0 +1,78 @@
+<form [formGroup]="form" (ngSubmit)="add_book()">
+  <div class="form-group mb-3 p-3">
+    <label for="title">Title:</label>
+    <input type="text" class="form-control"  placeholder="Enter the Title" formControlName="title" id="title">
+  </div>
+  
+  <div class="alert alert-danger mb-3 p-3" *ngIf="title.invalid && title.touched">
+    <div *ngIf="title.errors.required">Title is Required</div>
+  </div>
+
+  <div class="form-group mb-3 p-3">
+    <label for="author">Author:</label>
+    <input type="text" class="form-control"  placeholder="Enter the Author" formControlName="author" id="author">
+  </div>
+  <div class="alert alert-danger mb-3 p-3" *ngIf="author.invalid && author.touched">
+    <div *ngIf="author.errors.required">Author is Required</div>
+  </div>
+
+  <div class="form-group mb-3 p-3">
+    <label for="category">Category:</label>
+    <input type="text" class="form-control"  placeholder="Enter the Category" formControlName="category" id="category">
+  </div>
+  <div class="alert alert-danger mb-3 p-3" *ngIf="category.invalid && category.touched">
+    <div *ngIf="category.errors.required">Category is Required</div>
+  </div>
+
+  <div class="form-group mb-3 p-3">
+    <label for="publish_date">Publish Date:</label>
+    <input type="text" class="form-control"  placeholder="Enter the Publish Date" formControlName="publish_date" id="publish_date">
+  </div>
+  <div class="alert alert-danger mb-3 p-3" *ngIf="publish_date.invalid && publish_date.touched">
+    <div *ngIf="publish_date.errors.required">Publish Date is Required</div>
+  </div>
+
+  <div class="form-group mb-3 p-3">
+    <label for="image">Image:</label>
+    <input type="text" class="form-control"  placeholder="Enter the Image" formControlName="image" id="image">
+  </div>
+  <div class="alert alert-danger mb-3 p-3" *ngIf="image.invalid && image.touched">
+    <div *ngIf="image.errors.required">Image is Required</div>
+  </div>
+
+  <div class="form-group mb-3 p-3">
+    <label for="contact">Contact:</label>
+    <input type="text" class="form-control"  placeholder="Enter the Contact" formControlName="contact" id="contact">
+  </div>
+  <div class="alert alert-danger mb-3 p-3" *ngIf="contact.invalid && contact.touched">
+    <div *ngIf="contact.errors.required">Contact is Required</div>
+  </div>
+
+  <div class="form-group mb-3 p-3">
+    <label for="phone">Phone:</label>
+    <input type="text" class="form-control"  placeholder="Enter the Phone" formControlName="phone" id="phone">
+  </div>
+  <div class="alert alert-danger mb-3 p-3" *ngIf="phone.invalid && phone.touched">
+    <div *ngIf="phone.errors.required">Phone is Required</div>
+  </div>
+
+  <div class="form-group mb-3 p-3">
+    <label for="email">Email:</label>
+    <input type="text" class="form-control"  placeholder="Enter the Email" formControlName="email" id="email">
+  </div>
+  <div class="alert alert-danger mb-3 p-3" *ngIf="email.invalid && email.touched">
+    <div *ngIf="phone.errors.required">Email is Required</div>
+  </div>
+
+  <div class="form-group mb-3 p-3">
+    <label for="abstract">Abstract:</label>
+    <input type="text" class="form-control"  placeholder="Enter the Abstract" formControlName="abstract" id="abstract">
+  </div>
+  <div class="alert alert-danger mb-3 p-3" *ngIf="abstract.invalid && abstract.touched">
+    <div *ngIf="abstract.errors.required">Abstract is Required</div>
+  </div>
+
+ 
+
+  <button type="submit" class="btn btn-primary mx-3" [disabled]="form.invalid">Submit</button>
+</form>

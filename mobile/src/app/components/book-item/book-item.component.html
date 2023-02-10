@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+     Book item
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-card>
+  <ion-card-header>
+    <ion-card-subtitle>{{book.title}}</ion-card-subtitle>
+    <ion-card-title>{{book.author}}</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+      <p>{{book.abstract}}</p>
+      <p>{{book.publish_date}}</p>
+     
+      <img [src]="book.image">
+     
+     
+  </ion-card-content>
+</ion-card>
+
+<!-- Complete displaying the book properties -->

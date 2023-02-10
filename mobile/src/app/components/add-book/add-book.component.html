@@ -1,0 +1,155 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>Add Book</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content padding>
+    <form [formGroup]="form" (ngSubmit)="add_book()">
+      <ion-item lines="full">
+            <ion-label position="floating">Title</ion-label>
+            <ion-input type="text" required></ion-input>
+          </ion-item>
+          <ion-item lines="full">
+            <ion-label position="floating">Author</ion-label>
+            <ion-input type="email" required></ion-input>
+          </ion-item>
+          <ion-item lines="full">
+            <ion-label position="floating">Publish Date</ion-label>
+            <ion-input type="text" required></ion-input>
+          </ion-item>
+          <ion-item lines="full">
+            <ion-label position="floating">Image</ion-label>
+            <ion-input type="text" required></ion-input>
+          </ion-item>
+          <!-- Radio buttons -->
+          <ion-radio-group lines="full">
+            <ion-list-header>
+              <ion-label>Gender</ion-label>
+            </ion-list-header>
+            <ion-item>
+              <ion-label>Male</ion-label>
+              <ion-radio slot="start" value="male" checked></ion-radio>
+            </ion-item>
+            <ion-item>
+              <ion-label>Female</ion-label>
+              <ion-radio slot="start" value="female"></ion-radio>
+            </ion-item>
+          </ion-radio-group>
+          <!-- Checkboxes -->
+          <ion-list lines="full">
+            <ion-list-header>
+              <ion-label>Subjects</ion-label>
+            </ion-list-header>
+            <ion-item>
+              <ion-label>English</ion-label>
+              <ion-checkbox></ion-checkbox>
+            </ion-item>
+            <ion-item>
+              <ion-label>Maths</ion-label>
+              <ion-checkbox></ion-checkbox>
+            </ion-item>
+            <ion-item>
+              <ion-label>Science</ion-label>
+              <ion-checkbox></ion-checkbox>
+            </ion-item>
+            <ion-item>
+              <ion-label>History</ion-label>
+              <ion-checkbox></ion-checkbox>
+            </ion-item>
+          </ion-list>
+          <ion-row>
+            <ion-col>
+              <ion-button type="submit" color="danger" expand="block">Submit</ion-button>
+            </ion-col>
+          </ion-row>
+        </form>
+      </ion-content> 
+
+      <!-- <ion-header [translucent]="true">
+        <ion-toolbar>
+        <ion-title>
+        Add Book
+        </ion-title>
+        </ion-toolbar>
+        </ion-header>
+        
+        <ion-content>
+          <form [formGroup]="form" (ngSubmit)="add_book()">
+            <ion-list>
+              <ion-item>
+                <ion-label position="floating">Title</ion-label>
+                <ion-input formControlName="title"></ion-input>
+              </ion-item>
+              <ion-item *ngIf="title.invalid && title.touched">
+                <p class="error-message">Title is required</p>
+              </ion-item>
+              <ion-item>
+                <ion-label position="floating">Author</ion-label>
+                <ion-input formControlName="author"></ion-input>
+              </ion-item>
+              <ion-item *ngIf="author.invalid && author.touched">
+                <p class="error-message">Author is required</p>
+              </ion-item>
+              <ion-item>
+                <ion-label position="floating">Publish Date</ion-label>
+                <ion-input formControlName="publish_date"></ion-input>
+              </ion-item>
+              <ion-item *ngIf="publish_date.invalid && publish_date.touched">
+                <p class="error-message">Publish date is required</p>
+              </ion-item>
+              <ion-item>
+                <ion-label position="floating">Image</ion-label>
+                <ion-input formControlName="image"></ion-input>
+              </ion-item>
+              <ion-item *ngIf="image.invalid && image.touched">
+                <p class="error-message">Image is required</p>
+              </ion-item>
+              <ion-item>
+                <ion-label position="floating">Category</ion-label>
+                <ion-input formControlName="category"></ion-input>
+              </ion-item>
+              <ion-item *ngIf="category.invalid && category.touched">
+                <p class="error-message">Category is required</p>
+              </ion-item>
+              <ion-item>
+                <ion-label position="floating">Contact</ion-label>
+                <ion-input formControlName="contact"></ion-input>
+              </ion-item>
+              <ion-item *ngIf="contact.invalid && contact.touched">
+                <p class="error-message">Contact is required</p>
+              </ion-item>
+              <ion-item>
+                <ion-label position="floating">Phone</ion-label>
+                <ion-input formControlName="phone"></ion-input>
+              </ion-item>
+              <ion-item *ngIf="phone.invalid && phone.touched">
+                <p class="error-message">Phone is required</p>
+              </ion-item>
+              <ion-item>
+                <ion-label position="floating">Email</ion-label>
+                <ion-input formControlName="email"></ion-input>
+              </ion-item>
+              <ion-item *ngIf="email.invalid && email.touched">
+                <p class="error-message">Email is required</p>
+              </ion-item>
+              <ion-item>
+                <ion-label position="floating">Abstract</ion-label>
+                <ion-input type="text" formControlName="abstract"></ion-input>
+              </ion-item>
+              <div *ngIf="abstract.invalid && abstract.touched" class="error-message">
+                Abstract is required
+              </div>
+            </ion-list>
+            
+             <ion-button color="primary" expand="block" (click)="add_book()">Submit</ion-button>
+         
+          </form>
+        </ion-content> -->
+
+
+
+
+
+
+<!-- Add the form tag and display the validators and the submit button -->

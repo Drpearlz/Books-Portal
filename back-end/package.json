@@ -1,0 +1,20 @@
+{
+  "name": "books-portal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.17.1",
+    "mongodb": "^4.13.0",
+    "mysql2": "^1.7.0",
+    "sequelize": "^5.22.5"
+  }
+}

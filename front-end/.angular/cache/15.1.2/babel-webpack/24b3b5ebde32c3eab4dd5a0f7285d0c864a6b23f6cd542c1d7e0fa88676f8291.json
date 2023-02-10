@@ -1,0 +1,1 @@
+{"ast":null,"code":"function EmptyErrorImpl() {\n  Error.call(this);\n  this.message = 'no elements in sequence';\n  this.name = 'EmptyError';\n  return this;\n}\nEmptyErrorImpl.prototype = Object.create(Error.prototype);\nexport const EmptyError = EmptyErrorImpl;\n//# sourceMappingURL=EmptyError.js.map","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}

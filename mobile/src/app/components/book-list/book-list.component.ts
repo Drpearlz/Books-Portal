@@ -10,7 +10,10 @@ import { BooksService } from 'src/app/books.service';
 export class BookListComponent implements OnInit {
   books: Book[];
   constructor( private service: BooksService) {
-    this.service.getBooks().subscribe((x: {books})=>{this.books = x.books;});
+    console.log('hello')
+    this.service.getBooks().subscribe(books=>{
+      console.log(books)
+      this.books = books;});
    }
   ngOnInit() {}
 

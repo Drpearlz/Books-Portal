@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpHeaders, HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Book } from './book';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,7 @@ export class BooksService {
     const headers = new HttpHeaders(
       {'Content-Type': 'application/json', 'Accept': 'application/json'});
     const options = {headers: headers};
-    return this.http.get(`http://localhost:8000/books/getBooks/`, 
+    return this.http.get<Book[]>(`http://localhost:8000/books/getBooks/`, 
     options)
  
    }
